@@ -2,7 +2,7 @@
 
 # Patched Monitir Activity
 
-This project is custon Nifi monitor. It doffers from original in way, it doesn't sends file to `inactive` with processor's start up.
+This project is custom Nifi monitor. It differs from the original one in way, it doesn't sends file to `inactive` chanel while processor is starting up.
 
 You need build it with `Java 8`.
 
