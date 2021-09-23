@@ -1,9 +1,7 @@
 #!/bin/sh
 
-mvn package
-
 if [ "$#" -ne 1 ]; then
-    echo "Передайте имя стека и контейнера"
+    echo "Передайте имя стека"
     exit 1
 fi
 
@@ -18,4 +16,10 @@ else
 fi
 
 cp -v nifi-MonitorActivity-nar/target/nifi-MonitorActivity-nar-*.nar $VOLUME_PATH
+
+if [ $? -ne 0 ]; then
+    echo "Ошибка при копировании"
+    exit 1
+fi
+
 echo "Скопировано"
